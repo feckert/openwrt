@@ -45,6 +45,7 @@ $(if $(KCONFIG),Kernel-Config: $(KCONFIG)
 )$(if $(HIDDEN),Hidden: $(HIDDEN)
 )Description: $(if $(Package/$(1)/description),$(Package/$(1)/description),$(TITLE))
 $(if $(URL),$(URL)
+)$(if $(PKG_CPE_ID),CPE-ID: $(PKG_CPE_ID)
 )$(MAINTAINER)
 @@
 $(if $(Package/$(1)/config),Config:
